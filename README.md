@@ -10,7 +10,7 @@ The main idea is to create a seamless experience for discovering audiovisual con
 
 ### Hero Section
 
-![Hero Section](/hero-preview.png)
+![Hero Section](./public/hero-preview.png)
 
 > Main landing view, still in progress. 
 
