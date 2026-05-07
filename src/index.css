@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@theme {
+  --background-image-hero-pattern: url("/hero-bg.png");
+}
+
+
+
+@layer base {
+  body {
+    background: #050610;
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+  }
+  header img {
+    @apply w-100 max-w-lg h-auto object-contain mx-auto;
+  }
+}
+
+
+@layer components {
+  /*background*/
+  .pattern {
+    @apply bg-hero-pattern w-full h-screen bg-center bg-cover absolute -z-1;
+  }
+
+  .hero-section {
+    @apply relative z-1 w-full h-screen grid grid-cols-1 gap-6 text-white place-items-center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "left right";
+  }
+  .col-img1 { grid-area: left; }
+  .title { grid-area: title; }
+  .col-img2{ grid-area: right; }
+
+  .col-img1,
+  .title,
+  .col-img2 {
+    @apply flex flex-col items-center justify-center gap-4;
+  }
+
+  /*Title and search*/
+  .title-box { @apply w-full h-auto; }
+  .title-box img {
+    width: min(554px, 90vw);
+    height: auto;
+  }
+
+  /*Boxes movies*/
+  .img-box {
+    @apply rounded-4xl overflow-hidden transition-all duration-200 ease-out;
+    width: clamp(150px, 20vw, 230px);
+    aspect-ratio: 1/1;
+  }
+  .img-box:hover { transform: scale(1.06) translateY(-4px); }
+  .img-box img {
+    @apply w-full h-full object-cover;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-section {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "left title right";
+  }
+}
+
