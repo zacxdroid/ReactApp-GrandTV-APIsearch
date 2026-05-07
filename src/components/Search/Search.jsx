@@ -1,9 +1,14 @@
 import React from 'react'
-import './Search.css'
 
-const Search = () => {
+const Search = ({searchTerm, setSearchTerm}) => {
   return (
-    <div></div>
+    <div className="search">
+      <div>
+        <img src="search.svg" alt="search" />
+
+        <input type="text" placeholder='Search through +300 movies online'/>
+      </div>
+    </div>
   )
 }
 

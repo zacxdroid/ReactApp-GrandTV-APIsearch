@@ -12,6 +12,8 @@
 
 @theme {
   --background-image-hero-pattern: url("/hero-bg.png");
+  --color-light-100: #21168C;
+  --color-light-200: #A8B5DB;
 }
 
 
@@ -35,7 +37,7 @@
   }
 
   .hero-section {
-    @apply relative z-1 w-full h-screen grid grid-cols-1 gap-6 text-white place-items-center;
+    @apply relative z-1 w-full h-screen grid grid-cols-1 text-white p-10;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "title title" "left right";
   }
@@ -44,15 +46,18 @@
   .col-img2{ grid-area: right; }
 
   .col-img1,
-  .title,
   .col-img2 {
     @apply flex flex-col items-center justify-center gap-4;
   }
 
+  .title {
+    @apply flex flex-col items-center justify-center gap-20;
+  }
+
   /*Title and search*/
-  .title-box { @apply w-full h-auto; }
+  .title-box { @apply w-auto h-auto; }
   .title-box img {
-    width: min(554px, 90vw);
+    width: min(654px, 90vw);
     height: auto;
   }
 
@@ -66,10 +71,25 @@
   .img-box img {
     @apply w-full h-full object-cover;
   }
+
+  /*Search*/
+  .search {
+    @apply w-full bg-light-100 px-4 py-3 max-w-3xl mx-auto;
+    & div {
+      @apply relative flex items-center;
+    }
+    & img {
+      @apply absolute left-2 h-5 w-5;
+    }
+    & input {
+      @apply w-full bg-transparent py-2 sm:pr-10 pl-10 text-base placeholder-light-200 outline-hidden;
+    }
+  }
 }
 
 @media (min-width: 1280px) {
   .hero-section {
+    @apply p-10;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "left title right";
   }

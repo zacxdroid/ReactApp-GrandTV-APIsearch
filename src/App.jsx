@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Search from './components/Search/Search'
 
 const App = () => {
+  const [searchTerm, setSearchTerm] = useState('Hola perritasd e meirda ')
 
-  
   return (
     <main>
       <div className="pattern"/>
@@ -24,7 +24,7 @@ const App = () => {
             <img src="Grand-Tv.svg" alt="title"/>
           </div>
 
-          <Search/>
+          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
         </div>
 
         <div className='col-img2'>
