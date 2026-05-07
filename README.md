@@ -1,16 +1,62 @@
-# React + Vite
+# 🎬 Movie & TV Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A project focused on building a search for movies and TV shows, powered by an external API and designed as a visually driven and interactive interface.
 
-Currently, two official plugins are available:
+The main idea is to create a seamless experience for discovering audiovisual content through integration with **The Movie Database (TMDB)** API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Project Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Hero Section
 
-## Expanding the ESLint configuration
+![Hero Section](/hero-preview.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> Main landing view, still in progress. 
+
+---
+
+## Design
+
+The UI/UX is being designed in Figma:
+
+🔗 https://www.figma.com/design/BZWhHbJNPo2Mb7FQED4beL/Grand-TV?node-id=0-1&t=JoCN1EoZtERo4naS-1
+
+---
+
+## Tech Stack
+
+- Tailwind CSS  
+- Vite  
+- React  
+- JavaScript  
+- CSS  
+
+---
+
+## Project Goal
+
+Build a movie and TV show discovery platform connected to the **TMDB API**, enabling:
+
+- Real-time search for movies and TV shows. 
+- Detailed content exploration.
+- Modern, responsive, and fast UI.  
+
+---
+
+## API
+
+This project integrates with:
+
+- TMDB (The Movie Database) API  
+
+---
+
+## Current Status
+
+In development. Current progress includes:
+
+- Hero section layout implementation. 
+- Base UI structure with Tailwind CSS. 
+- Initial search interface setup. 
+- Preparing API integration layer.
